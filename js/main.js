@@ -20,21 +20,32 @@
   const burger = document.getElementById('burger');
   const nav = document.getElementById('nav');
 
+  // Create overlay to close nav on outside click
+  const navOverlay = document.createElement('div');
+  navOverlay.className = 'nav-overlay';
+  document.body.appendChild(navOverlay);
+
+  function closeNav() {
+    nav.classList.remove('open');
+    burger.classList.remove('active');
+    burger.setAttribute('aria-expanded', 'false');
+    navOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
   if (burger && nav) {
     burger.addEventListener('click', function () {
       const open = nav.classList.toggle('open');
       burger.classList.toggle('active', open);
       burger.setAttribute('aria-expanded', String(open));
+      navOverlay.classList.toggle('active', open);
       document.body.style.overflow = open ? 'hidden' : '';
     });
 
+    navOverlay.addEventListener('click', closeNav);
+
     nav.querySelectorAll('.header__nav-link').forEach(function (link) {
-      link.addEventListener('click', function () {
-        nav.classList.remove('open');
-        burger.classList.remove('active');
-        burger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeNav);
     });
   }
 

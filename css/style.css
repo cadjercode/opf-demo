@@ -393,7 +393,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(18, 24, 32, 0.92) 0%, rgba(18, 24, 32, 0.75) 50%, rgba(18, 24, 32, 0.88) 100%);
+  background: linear-gradient(135deg, rgba(18, 24, 32, 0.55) 0%, rgba(18, 24, 32, 0.32) 50%, rgba(18, 24, 32, 0.50) 100%);
   z-index: 1;
 }
 
@@ -807,7 +807,7 @@ button {
 
 /* --- Footer --- */
 .footer {
-  padding: var(--space-3xl) 0 var(--space-xl);
+  padding: var(--space-xl) 0 var(--space-md);
   border-top: 1px solid var(--border);
 }
 
@@ -1792,14 +1792,13 @@ button {
   max-width: 130px;
   max-height: 44px;
   object-fit: contain;
-  opacity: 0.6;
-  filter: grayscale(0.3);
-  transition: opacity 200ms ease, filter 200ms ease;
+  opacity: 0.85;
+  filter: none;
+  transition: opacity 200ms ease;
 }
 
 .logo-carousel__item:hover img {
   opacity: 1;
-  filter: grayscale(0);
 }
 
 /* section--light variant */
@@ -2024,6 +2023,17 @@ button {
 
 .contact-info-card__item a:hover {
   color: var(--accent);
+}
+
+.contact-map {
+  margin-top: var(--space-xl);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.contact-map iframe {
+  border-radius: var(--radius-lg);
 }
 
 .contact-info-card--zone p {
@@ -2388,6 +2398,34 @@ button {
   line-height: 1.65;
 }
 
+.norm-card--link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.norm-card--link:hover {
+  border-color: rgba(232, 168, 23, 0.4);
+  transform: translateY(-3px);
+}
+
+.norm-card--link:hover::before {
+  transform: scaleX(1);
+}
+
+.norm-card__cta {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: var(--space-sm);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
 /* Trust Grid — "Pourquoi OPF ?" */
 .trust-grid {
   display: grid;
@@ -2734,7 +2772,20 @@ button {
     padding: var(--space-3xl) var(--space-lg);
     transform: translateX(100%);
     transition: transform var(--duration-medium) var(--ease-enter);
+    z-index: 1000;
+  }
+
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
     z-index: 999;
+    cursor: pointer;
+  }
+
+  .nav-overlay.active {
+    display: block;
   }
 
   .header__nav.open {
@@ -2756,6 +2807,8 @@ button {
 
   .header__burger {
     display: flex;
+    position: relative;
+    z-index: 1001;
   }
 
   .header__burger.active span:nth-child(1) {
