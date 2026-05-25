@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Comparaison Design — Occitanie Protection Foudre</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #111; color: #fff; font-family: system-ui, sans-serif; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 2rem; margin-bottom: 10px; }
+  .subtitle { text-align: center; color: #888; margin-bottom: 40px; font-size: 0.95rem; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1600px; margin: 0 auto; }
+  .card { background: #1a1a1a; border-radius: 12px; overflow: hidden; border: 2px solid transparent; transition: border-color 0.3s; cursor: pointer; }
+  .card:hover { border-color: #E8A817; }
+  .card img { width: 100%; height: auto; display: block; }
+  .card-info { padding: 20px; }
+  .card-info h2 { font-size: 1.3rem; margin-bottom: 8px; }
+  .card-info .tag { display: inline-block; background: #E8A817; color: #000; padding: 3px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; margin-bottom: 10px; }
+  .card-info p { color: #aaa; font-size: 0.9rem; line-height: 1.5; }
+  .reco { border-color: #E8A817; }
+  .reco .tag { background: #E8A817; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; max-width: 600px; } }
+</style>
+</head>
+<body>
+  <h1>3 Directions Design — OPF</h1>
+  <p class="subtitle">Le texte sur les images est du faux (l'IA ne sait pas écrire du français). On regarde l'ambiance, les couleurs, et la mise en page.</p>
+  <div class="grid">
+    <div class="card">
+      <img src="variant-A.jpg" alt="Variante A">
+      <div class="card-info">
+        <h2>Variante A</h2>
+        <span class="tag" style="background:#666">CLASSIQUE</span>
+        <p>Dark + Amber chaud. Hero dramatique avec éclair. Sections alternées sombre/beige. Chaleureux, accessible, professionnel.</p>
+      </div>
+    </div>
+    <div class="card reco">
+      <img src="variant-B.jpg" alt="Variante B">
+      <div class="card-info">
+        <h2>Variante B</h2>
+        <span class="tag">RECOMMANDÉ</span>
+        <p>Éditorial Bold. Typo massive "PROTECTION FOUDRE". Layout asymétrique. Noir + ambre. Le plus de caractère, le plus mémorable.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="variant-C.jpg" alt="Variante C">
+      <div class="card-info">
+        <h2>Variante C</h2>
+        <span class="tag" style="background:#2563EB;color:#fff">TECH</span>
+        <p>Full dark navy + bleu électrique. Grid de cards, ambiance SaaS. Très moderne mais peut-être trop "startup" pour du BTP.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
