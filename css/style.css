@@ -186,6 +186,7 @@ button {
   position: fixed;
   top: -100%;
   left: var(--space-sm);
+  min-height: 44px;
   z-index: 9999;
   padding: var(--space-xs) var(--space-sm);
   background: var(--accent);
@@ -205,6 +206,7 @@ button {
   align-items: center;
   gap: var(--space-xs);
   padding: 14px 32px;
+  min-height: 44px;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.9375rem;
