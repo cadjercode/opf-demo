@@ -351,15 +351,19 @@ button {
 .header__cta {
   padding: 10px 24px;
   font-size: 0.875rem;
+  min-height: 44px;
 }
 
 /* Burger */
 .header__burger {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
-  width: 28px;
-  padding: 4px 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
 }
 
 .header__burger span {
@@ -652,6 +656,7 @@ button {
   align-items: center;
   gap: var(--space-xs);
   font-size: 0.875rem;
+  min-height: 44px;
   font-weight: 600;
   color: var(--accent);
   transition: gap var(--duration-short) var(--ease-enter);
@@ -2799,6 +2804,10 @@ button {
 
   .header__nav-link {
     font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 var(--space-xs);
   }
 
   .header__cta {
@@ -2996,6 +3005,21 @@ button {
     flex-direction: column;
     gap: var(--space-xs);
     text-align: center;
+  }
+
+  /* Tap targets footer — min 44px */
+  .footer__nav a,
+  .footer__services a,
+  .footer__contact a,
+  .footer__bottom a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .footer__nav ul,
+  .footer__services ul {
+    gap: 0;
   }
 
   /* ICPE page — mobile */
