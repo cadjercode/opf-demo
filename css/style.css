@@ -2837,7 +2837,7 @@ button {
 
   .about__image-wrapper {
     aspect-ratio: 16/9;
-    max-height: 360px;
+    max-height: 220px;
   }
 
   .service-detail__grid,
