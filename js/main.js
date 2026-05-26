@@ -47,6 +47,27 @@
     nav.querySelectorAll('.header__nav-link').forEach(function (link) {
       link.addEventListener('click', closeNav);
     });
+
+    var navClose = document.getElementById('nav-close');
+    if (navClose) {
+      navClose.addEventListener('click', closeNav);
+    }
+  }
+
+  /* --- FAQ show more --- */
+  var faqMore = document.getElementById('faq-more');
+  if (faqMore) {
+    faqMore.addEventListener('click', function () {
+      var hidden = document.querySelectorAll('.faq-item--hidden');
+      var expanded = faqMore.getAttribute('aria-expanded') === 'true';
+      hidden.forEach(function (item) {
+        item.classList.toggle('faq-item--visible', !expanded);
+      });
+      faqMore.setAttribute('aria-expanded', String(!expanded));
+      faqMore.innerHTML = expanded
+        ? 'Voir les 4 autres questions <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>'
+        : 'Réduire <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>';
+    });
   }
 
   /* --- Scroll Reveal --- */

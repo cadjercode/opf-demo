@@ -41,6 +41,9 @@
         <img src="images/logos/logo-opf.jpg" alt="Occitanie Protection Foudre" class="header__logo-img" width="83" height="50">
       </a>
       <nav class="header__nav" id="nav" aria-label="Navigation principale">
+        <button class="header__nav-close" id="nav-close" aria-label="Fermer le menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
         <ul class="header__nav-list">
           <li><a href="index.html" class="header__nav-link">Accueil</a></li>
           <li><a href="services.html" class="header__nav-link">Services</a></li>
@@ -133,26 +136,30 @@
           <img src="images/content/protection-foudre-1.webp" alt="Installation de protection foudre conforme aux normes NF EN 62305" class="norms-illustration__img" width="800" height="450" loading="lazy" decoding="async">
         </div>
         <div class="norms-grid">
-          <div class="norm-card" data-reveal>
+          <a class="norm-card norm-card--link" href="https://www.boutique.afnor.org/fr-fr/recherche?q=NF+EN+62305" target="_blank" rel="noopener noreferrer" data-reveal>
             <h3 class="norm-card__title">NF EN 62305</h3>
             <p class="norm-card__subtitle">Protection contre la foudre</p>
             <p class="norm-card__text">Norme européenne en 4 parties : principes généraux, gestion du risque, dommages physiques, réseaux électriques et électroniques.</p>
-          </div>
-          <div class="norm-card" data-reveal>
+            <span class="norm-card__cta">Consulter sur AFNOR →</span>
+          </a>
+          <a class="norm-card norm-card--link" href="https://www.boutique.afnor.org/fr-fr/recherche?q=NF+C+17-102" target="_blank" rel="noopener noreferrer" data-reveal>
             <h3 class="norm-card__title">NF C 17-102</h3>
             <p class="norm-card__subtitle">Paratonnerres PDA</p>
             <p class="norm-card__text">Norme française spécifique aux Paratonnerres à Dispositif d'Amorçage — conception, installation, vérification.</p>
-          </div>
-          <div class="norm-card" data-reveal>
+            <span class="norm-card__cta">Consulter sur AFNOR →</span>
+          </a>
+          <a class="norm-card norm-card--link" href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000022953557" target="_blank" rel="noopener noreferrer" data-reveal>
             <h3 class="norm-card__title">Arrêté du 4/10/2010</h3>
             <p class="norm-card__subtitle">Réglementation ICPE</p>
             <p class="norm-card__text">Obligations de protection foudre des installations classées : ARF, étude technique, vérifications périodiques Q18.</p>
-          </div>
-          <div class="norm-card" data-reveal>
+            <span class="norm-card__cta">Consulter sur Légifrance →</span>
+          </a>
+          <a class="norm-card norm-card--link" href="https://www.boutique.afnor.org/fr-fr/recherche?q=NF+C+15-100" target="_blank" rel="noopener noreferrer" data-reveal>
             <h3 class="norm-card__title">NF C 15-100</h3>
             <p class="norm-card__subtitle">Installations BT</p>
             <p class="norm-card__text">Norme des installations électriques basse tension — intégration des parafoudres et protection des circuits.</p>
-          </div>
+            <span class="norm-card__cta">Consulter sur AFNOR →</span>
+          </a>
         </div>
       </div>
     </section>
@@ -202,30 +209,34 @@
               <p>Le <strong>paratonnerre</strong> capte la foudre et la conduit à la terre — c'est la protection <em>externe</em>. Le <strong>parafoudre</strong> protège les équipements électriques et électroniques contre les surtensions qui se propagent dans les réseaux — c'est la protection <em>interne</em>. Une protection complète combine les deux.</p>
             </div>
           </details>
-          <details class="faq-item" data-reveal>
+          <details class="faq-item faq-item--hidden" data-reveal>
             <summary class="faq-item__question">À quelle fréquence faut-il vérifier une installation de protection foudre&nbsp;?</summary>
             <div class="faq-item__answer">
               <p>Pour les installations ICPE, la vérification est <strong>annuelle</strong> (ou tous les 2 ans selon l'arrêté). Elle comprend un contrôle visuel, des mesures de résistance de terre, et la vérification des parafoudres. Pour les autres bâtiments, une vérification tous les 2 à 3 ans est recommandée.</p>
             </div>
           </details>
-          <details class="faq-item" data-reveal>
+          <details class="faq-item faq-item--hidden" data-reveal>
             <summary class="faq-item__question">Qu'est-ce que la certification Qualifoudre&nbsp;?</summary>
             <div class="faq-item__answer">
               <p>Qualifoudre est une certification professionnelle qui atteste de la compétence d'une entreprise en protection foudre. Elle est délivrée sur audit par un organisme indépendant et renouvelée tous les 3 ans. Le <strong>Niveau 3</strong> (le nôtre) est le plus élevé — il couvre l'étude, la conception, l'installation et la vérification.</p>
             </div>
           </details>
-          <details class="faq-item" data-reveal>
+          <details class="faq-item faq-item--hidden" data-reveal>
             <summary class="faq-item__question">Combien coûte une installation de protection foudre&nbsp;?</summary>
             <div class="faq-item__answer">
               <p>Le coût dépend de nombreux facteurs : taille et hauteur du bâtiment, type d'activité, niveau de protection requis, état de l'installation électrique existante. Une étude préalable est indispensable pour établir un devis précis. Contactez-nous pour un diagnostic gratuit.</p>
             </div>
           </details>
-          <details class="faq-item" data-reveal>
+          <details class="faq-item faq-item--hidden" data-reveal>
             <summary class="faq-item__question">Intervenez-vous en dehors du Tarn&nbsp;?</summary>
             <div class="faq-item__answer">
               <p>Oui, et ma zone d'intervention est très large. Basé à <strong>Labruguière (81)</strong>, j'interviens dans tout le <strong>Tarn</strong> et l'ensemble de la région <strong>Occitanie</strong> — ce qui couvre des villes comme <strong>Toulouse, Montpellier, Perpignan, Nîmes, Marseille</strong> et <strong>Narbonne</strong>. Si votre site se trouve en dehors de ces zones, contactez-moi : j'étudie chaque demande au cas par cas.</p>
             </div>
           </details>
+          <button class="faq-more" id="faq-more" aria-expanded="false">
+            Voir les 4 autres questions
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
         </div>
       </div>
     </section>

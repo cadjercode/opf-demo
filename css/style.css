@@ -1595,6 +1595,42 @@ button {
   color: #555;
 }
 
+.faq-item--hidden {
+  display: none;
+}
+
+.faq-item--hidden.faq-item--visible {
+  display: block;
+}
+
+.faq-more {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+  padding: var(--space-sm) 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--duration-micro);
+  min-height: 44px;
+}
+
+.faq-more:hover {
+  color: var(--accent);
+}
+
+.faq-more svg {
+  transition: transform var(--duration-short) var(--ease-enter);
+}
+
+.faq-more[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
 /* --- Contact --- */
 .contact__grid {
   display: grid;
@@ -2769,6 +2805,8 @@ button {
     --section-gap: 80px;
   }
 
+  .header__nav-close { display: none; } /* masqué par défaut, affiché dans le media query tablet */
+
   .header__nav {
     position: fixed;
     top: 0;
@@ -2821,6 +2859,29 @@ button {
     display: flex;
     position: relative;
     z-index: 1001;
+  }
+
+  /* Bouton fermer dans le drawer */
+  .header__nav-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    width: 44px;
+    height: 44px;
+    margin-bottom: var(--space-md);
+    color: var(--text-body);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background var(--duration-micro), color var(--duration-micro);
+  }
+
+  .header__nav-close:hover {
+    background: var(--accent);
+    color: var(--bg-deep);
+    border-color: var(--accent);
   }
 
   .header__burger.active span:nth-child(1) {
@@ -2997,7 +3058,7 @@ button {
   }
 
   .page-hero {
-    padding-top: 100px;
+    padding: 90px 0 var(--space-lg);
   }
 
   .footer__grid {
@@ -3010,7 +3071,7 @@ button {
     text-align: center;
   }
 
-  /* Tap targets footer — min 44px */
+  /* Footer mobile compact */
   .footer__nav a,
   .footer__services a,
   .footer__contact a,
@@ -3018,11 +3079,37 @@ button {
     display: inline-flex;
     align-items: center;
     min-height: 44px;
+    font-size: 0.875rem;
   }
 
   .footer__nav ul,
   .footer__services ul {
     gap: 0;
+  }
+
+  .footer__heading {
+    font-size: 0.6875rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer__tagline {
+    font-size: 0.8125rem;
+  }
+
+  .footer__contact p {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .footer__contact address {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .footer__hours {
+    font-size: 0.8125rem;
+    margin-top: var(--space-xs);
   }
 
   /* ICPE page — mobile */
