@@ -729,12 +729,13 @@ button {
 
 /* --- Partners --- */
 .partners {
-  padding: var(--space-lg) 0;
+  padding: var(--space-md) 0;
   border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .partners__label {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -746,7 +747,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
 }
 
 .partners__logo {
@@ -1739,7 +1740,7 @@ button {
 .logo-carousel {
   overflow: hidden;
   position: relative;
-  padding: var(--space-lg) 0;
+  padding: var(--space-sm) 0;
 }
 
 .logo-carousel::before,
@@ -1788,16 +1789,16 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 140px;
-  height: 60px;
+  width: 110px;
+  height: 40px;
 }
 
 .logo-carousel__item img {
   display: block;
   width: auto;
-  height: 44px;
-  max-width: 130px;
-  max-height: 44px;
+  height: 32px;
+  max-width: 100px;
+  max-height: 32px;
   object-fit: contain;
   opacity: 0.85;
   filter: none;
