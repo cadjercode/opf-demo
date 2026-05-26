@@ -544,7 +544,7 @@ button {
 
 /* --- Stats --- */
 .stats {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-2xl) 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -2828,7 +2828,7 @@ button {
 
   .about__grid {
     grid-template-columns: 1fr;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
   }
 
   .about__visual {
@@ -2919,13 +2919,13 @@ button {
 /* Mobile */
 @media (max-width: 767px) {
   :root {
-    --section-gap: 64px;
+    --section-gap: 44px;
   }
 
   .hero {
-    padding-top: 120px;
+    padding-top: 100px;
     min-height: auto;
-    padding-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
   }
 
   .hero__scroll {
@@ -2941,13 +2941,23 @@ button {
   }
 
   .stats__inner {
-    flex-direction: column;
-    gap: var(--space-lg);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    justify-content: center;
+  }
+
+  .stats__item {
+    flex: 0 0 calc(50% - var(--space-md));
+    text-align: center;
+  }
+
+  .stats {
+    padding: var(--space-lg) 0;
   }
 
   .stats__divider {
-    width: 60px;
-    height: 1px;
+    display: none;
   }
 
   .services__grid {
@@ -2955,15 +2965,15 @@ button {
   }
 
   .service-card {
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--space-md);
   }
 
   .section__header {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
   }
 
   .cta-section__inner {
-    padding: var(--space-xl) var(--space-md);
+    padding: var(--space-lg) var(--space-md);
   }
 
   .contact-form__row {
